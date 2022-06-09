@@ -1,80 +1,76 @@
- *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.game{
-    width: 100%;
-    height: 500px;
-    border-bottom: 10px solid rgb(4, 224, 7);
-    margin: 0 auto;
-   /* position relative, bloqueia a img dentro do width do Main de 80% */
-    position: relative;
-   /*  overflow hidden, tudo que está fora do meu Main width de 80% será apagado da tela */
-    overflow: hidden;
-    background: linear-gradient(#87ceeb, #e0f6ff);
-
+.game {
+  width: 100%;
+  height: 500px;
+  border-bottom: 10px solid rgb(4, 224, 7);
+  margin: 0 auto;
+  /* position relative, bloqueia a img dentro do width do Main de 80% */
+  position: relative;
+  /*  overflow hidden, tudo que está fora do meu Main width de 80% será apagado da tela */
+  overflow: hidden;
+  background: linear-gradient(#87ceeb, #e0f6ff);
 }
 
-
-.mario{
-    position: absolute;
-    bottom: 0px;
-    width: 150px;  
-
+.mario {
+  position: absolute;
+  bottom: 0px;
+  width: 150px;
 }
 
- .pular{
-    animation: Jump 800ms ease-out;
-
-} 
-
-.pipe{
-position: absolute;
-bottom: 0;
-width: 80px;
- animation: pipe 1.5s infinite linear; 
-
+.pular {
+  animation: Jump 800ms ease-out;
 }
-.clouds{
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe 1s infinite linear;
+}
+.clouds {
   width: 580px;
   position: absolute;
-  animation: cloud 15s infinite linear; 
+  animation: cloud 15s infinite linear;
 }
 
-.button{
+.button {
   display: none;
-  text-align: center;
-  width: 100px;
-  height: 35px;
-  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 140px;
+  height: 60px;
+  border-radius: 40px;
   background: transparent;
+  justify-content:center ;
+  font-size: 20px;
 }
 
 @keyframes Jump {
-    0% {
-      bottom: 0px;
-    }
-    40% {
-      bottom: 180px;
-    }
-  
-    50% {
-      bottom: 180px;
-    }
-  
-    60% {
-      bottom: 180px;
-    }
-   
-  
-    100% {
-      bottom: 0px;
-    }
+  0% {
+    bottom: 0px;
+  }
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0px;
+  }
 }
 
-  
 @keyframes cloud {
   from {
     right: -580px;
@@ -82,14 +78,13 @@ width: 80px;
   to {
     right: 100%;
   }
-} 
+}
 
-
-  @keyframes pipe {
-    from {
-      right: -80px;
-    }
-    to {
-      right: 100%;
-    }
-  } 
+@keyframes pipe {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
